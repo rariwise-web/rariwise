@@ -201,6 +201,12 @@ body { min-height: calc(var(--vh, 1vh) * 100); }
             
         }
 
+        @media (min-width: 769px) {
+            .main-wrapper {
+             max-width: 500px;
+            }
+        }
+
         .avatar-box {
             position: relative;
             width: 120px;
@@ -293,6 +299,29 @@ body { min-height: calc(var(--vh, 1vh) * 100); }
             transform: translateZ(20px);
         }
 
+        .social-item {
+            width: auto;
+            height: auto;
+            min-width: 54px;
+            padding: 10px 8px;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .social-item .social-label {
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: rgba(236, 233, 253, 0.55);
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .social-item:hover .social-label {
+            color: var(--fox-dark);
+        }
+
         .social-item img {
             width: 1.4em;
             height: 1.4em;
@@ -306,6 +335,9 @@ body { min-height: calc(var(--vh, 1vh) * 100); }
         .social-item {
             transition: all 0.3s ease;
         }
+
+        
+        
 
         .social-item:hover {
             background: var(--fox-orange);
@@ -427,14 +459,14 @@ body { min-height: calc(var(--vh, 1vh) * 100); }
             height: 1.4em;
             transition: filter 0.3s ease;
             filter: brightness(0) invert(1);
-            position: fixed;
         }
 
 
         .social-item:hover .boosty-icon {
             filter: brightness(0) invert(0);
-            position: fixed;
         }
+
+        
 
         @media (max-width: 768px) {
 
@@ -612,18 +644,19 @@ body { min-height: calc(var(--vh, 1vh) * 100); }
 
             <div class="social-grid">
                 <div class="row">
-                    <a href="https://discord.gg/cRKcyzSG2G" class="social-item"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://t.me/rariwise" class="social-item"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="https://www.youtube.com/@rariwise" class="social-item"><i class="fab fa-youtube"></i></a>  
-                    <a href="https://www.twitch.tv/rariwise" class="social-item"><i class="fab fa-twitch"></i></a>
-                    <a href="https://boosty.to/rariwise02" class="social-item"><i class="fa fa-video-camera"></i></a>
+                    <a href="https://discord.gg/cRKcyzSG2G" class="social-item"><i class="fa-brands fa-discord"></i><span class="social-label">Discord</span></a>
+                    <a href="https://t.me/rariwise" class="social-item"><i class="fab fa-telegram-plane"></i><span class="social-label">Telegram</span></a>
+                    <a href="https://www.youtube.com/@rariwise" class="social-item"><i class="fab fa-youtube"></i><span class="social-label">Youtube</span></a>  
+                    <a href="https://www.twitch.tv/rariwise" class="social-item"><i class="fab fa-twitch"></i><span class="social-label">Twitch</span></a>
+                    <a href="https://boosty.to/rariwise02" class="social-item"><i class="fa fa-video-camera"></i><span class="social-label">Cinema</span></a>
                 </div>
                 <div class="row">
-                    <a href="https://www.donationalerts.com/r/rariwise" class="social-item"><i class="fas fa-hand-holding-dollar"></i></a>
-                    <a href="https://www.tiktok.com/@rari_wise?_t=8pdT7pPftb7&_r=1" class="social-item"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/a.ir_vera" class="social-item"><i class="fab fa-instagram"></i></a>
-                    <a href="https://boosty.to/rariwise" class="social-item boosty-link">
+                    <a href="https://www.donationalerts.com/r/rariwise" class="social-item"><i class="fas fa-hand-holding-dollar"></i><span class="social-label">Donate</span></a>
+                    <a href="https://www.tiktok.com/@rari_wise?_t=8pdT7pPftb7&_r=1" class="social-item"><i class="fa-brands fa-tiktok"></i><span class="social-label">TikTok</span></a>
+                    <a href="https://www.instagram.com/a.ir_vera" class="social-item"><i class="fab fa-instagram"></i><span class="social-label">Instagram</span></a>
+                    <a href="https://boosty.to/rariwise" class="social-item boosty-link" style="width: auto; padding: 0 12px; gap: 5px;">
                         <img src="boosty.png" alt="Boosty" class="boosty-icon">
+                        <span class="social-label">Boosty</span>
                     </a>
                 </div>
             </div>
